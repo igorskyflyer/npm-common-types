@@ -43,3 +43,9 @@ export type Trim<Input extends string> = Input extends ` ${infer Rest}`
   : Input extends `${infer Rest} `
     ? Trim<Rest>
     : Input
+
+export type IsGeneric<T> = T extends infer U
+  ? U extends object
+    ? true
+    : false
+  : false
