@@ -30,6 +30,7 @@
       "style": {
         "noInferrableTypes": "off"
       },
+      "complexity": { "noBannedTypes": "off" },
       "suspicious": {
         "noExplicitAny": "off"
       }
