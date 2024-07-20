@@ -62,7 +62,7 @@ npm i -D "@igor.dvlpr/common-types"
 
 ### `KeysOf<Obj>`
 
-Extract all keys from an object.
+Extracts all keys from an object.
 
 <br>
 
@@ -81,7 +81,7 @@ type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
 
 ### `MethodsOf<Obj>`
 
-Extract all methods from an object.
+Extracts all methods from an object.
 
 <br>
 
@@ -100,7 +100,7 @@ type NumberMethods = MethodsOf<Number> // 'toString' | 'toFixed' | 'toExponentia
 
 ### `PropertiesOf<Obj>`
 
-Extract all properties from an object.
+Extracts all properties from an object.
 
 <br>
 
@@ -124,7 +124,7 @@ Constructs a type with all top-level and nested properties of `Type` set to opti
 <br>
 
 > [!TIP]
-> See also TypeScript's built-in utility type [`Partial<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype) ![An external link](https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/external.svg)
+> See also TypeScript's built-in utility type [`Partial<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype) ![An external link](https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/external.svg).
 >
 
 <br>
@@ -158,9 +158,32 @@ type PersonOptional = DeepPartial<IPerson>
 
 ---
 
+### `Promisable<Type>`
+
+Provides a convenient way to allow flexibility in handling values that could either be immediate or asynchronously resolved.
+
+<br>
+
+`example.ts`
+```ts
+const immediateValue: number = 42
+const promiseValue: Promisable<number> = Promise.resolve(42)
+
+async function handleValue(value: Promisable<number>) {
+  const result = await processValue(value)
+  console.log(result) // Will log the number 42, whether `value` was a direct number or a Promise resolving to 42
+}
+
+handleValue(immediateValue)
+handleValue(promiseValue)
+
+```
+
+---
+
 ## ✨ Examples
 
-`utils.mts`
+`utils.ts`
 ```ts
 
 ```
