@@ -3,31 +3,31 @@
 <br>
 
 <p align="center">
-	🔦 Provides frequently used types for your TypeScript projects. 🫏
+  🔦 Provides frequently used types for your TypeScript projects. 🫏
 </p>
 
 <br>
 <br>
 
 <div align="center">
-	<blockquote>
-		<br>
-		<h4>💖 Support further development</h4>
-		<span>I work hard for every project, including this one and your support means a lot to me!
-		<br>
-		Consider buying me a coffee. ☕
-		<br>
-		<strong>Thank you for supporting my efforts! 🙏😊</strong></span>
-		<br>
-		<br>
-		<a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
-		<br>
-		<br>
-		<a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
-		<br>
-		<br>
-		<br>
-	</blockquote>
+  <blockquote>
+    <br>
+    <h4>💖 Support further development</h4>
+    <span>I work hard for every project, including this one and your support means a lot to me!
+    <br>
+    Consider buying me a coffee. ☕
+    <br>
+    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
+    <br>
+    <br>
+    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
+    <br>
+    <br>
+    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
+    <br>
+    <br>
+    <br>
+  </blockquote>
 </div>
 
 <br>
@@ -81,19 +81,23 @@ type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
 
 ### `TypeOfValues<Type>`
 
-Extracts all value types of a `Type`.
+Extracts all value types of a `Type`. Works with top-level properties only.
 
 <br>
 
-> [!CAUTION] 
-> Can **NOT** be used with generics.
->
-
-<br>
+`IPerson.ts`
+```ts
+interface IPerson {
+  firstName: string
+  lastName: string
+  zip: number
+  isMember: boolean
+}
+```
 
 `example.ts`
 ```ts
-type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
+type ValueTypes = TypeOfValues<IPerson> // string | number | boolean
 ```
 
 ---
@@ -222,13 +226,39 @@ type ConfigNumbers = EnumKeys<IConfig, number> // 'timeout' | 'retryAttempts'
 
 ---
 
-### `Callback<Args, ReturnType>`
+### `Func<Args, ReturnType>`
 
 Constructs a generic `Function`-like type with typed arguments and the return value.
 
 <br>
 
+```ts
+function process(items: number[], callback: Func<number, boolean>): boolean {
+  // shortened for brevity
+  // DO NOT access your Array like this :)
+  for (let i = 0; i < items.length; i++) {
+    if (callback(items[i])) {
+      return true
+    }
+  }
+
+  return false
+}
+
+process([1, 1, 8, 1], (item): boolean => {
+  if (item % 2 === 0) {
+    return true
+  }
+
+  return false
+}) // returns true
 ```
+
+---
+
+### `Callback<Args, ReturnType>`
+
+Alias of [`Func<Args, ReturnType>`](#funcargs-returntype).
 
 ---
 
