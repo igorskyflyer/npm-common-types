@@ -37,6 +37,18 @@
 
 - [Usage](#-usage)
 - [API](#-api)
+  - [KeysOf\<Type>](#keysoftype)
+  - [TypeOfValues\<Type>](#typeofvaluestype)
+  - [MethodsOf\<Type>](#methodsoftype)
+  - [PropertiesOf\<Type>](#propertiesoftype)
+  - [DeepPartial\<Type>](#deeppartialtype)
+  - [Promisable\<Type>](#promisabletype)
+  - [EnumKeys\<Type, KeyType>](#enumkeystype-keytype)
+  - [Func<Args, ReturnType>](#funcargs-returntype)
+  - [Callback<Args, ReturnType>](#callbackargs-returntype)
+  - [TrimLeft\<Input>](#trimleftinput)
+  - [TrimRight\<Input>](#trimrightinput)
+  - [Trim\<Input>](#triminput)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -121,7 +133,7 @@ type NumberMethods = MethodsOf<Number> // 'toString' | 'toFixed' | 'toExponentia
 
 ---
 
-### `PropertiesOf<Obj>`
+### `PropertiesOf<Type>`
 
 Extracts all properties from a `Type`.
 
