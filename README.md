@@ -329,7 +329,7 @@ Returns a Boolean whether the type `Type` is a generic.
 `example.ts`
 ```ts
 type ArrayIsGeneric = IsGeneric<Array<string>> // true
-type NumberIsGeneric = IsGeneric<Number> // false
+type NumberIsGeneric = IsGeneric<number> // false
 ```
 ---
 
