@@ -60,14 +60,14 @@ npm i -D "@igor.dvlpr/common-types"
 
 ## 🤹🏼 API
 
-### `KeysOf<Obj>`
+### `KeysOf<Type>`
 
-Extracts all keys from an object.
+Extracts all keys from a `Type`.
 
 <br>
 
 > [!TIP] 
-> **Can** be used with generics as well.
+> **CAN** be used with generics as well.
 >
 
 <br>
@@ -79,9 +79,28 @@ type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
 
 ---
 
-### `MethodsOf<Obj>`
+### `TypeOfValues<Type>`
 
-Extracts all methods from an object.
+Extracts all value types of a `Type`.
+
+<br>
+
+> [!CAUTION] 
+> Can **NOT** be used with generics.
+>
+
+<br>
+
+`example.ts`
+```ts
+type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
+```
+
+---
+
+### `MethodsOf<Type>`
+
+Extracts all methods from a `Type`.
 
 <br>
 
@@ -100,7 +119,7 @@ type NumberMethods = MethodsOf<Number> // 'toString' | 'toFixed' | 'toExponentia
 
 ### `PropertiesOf<Obj>`
 
-Extracts all properties from an object.
+Extracts all properties from a `Type`.
 
 <br>
 
@@ -176,6 +195,38 @@ async function handleValue(value: Promisable<number>) {
 
 handleValue(immediateValue)
 handleValue(promiseValue)
+```
+
+---
+
+### `EnumKeys<Type, KeyType>`
+
+Extracts all keys from a `Type` that are of type `KeyType`.
+
+<br>
+
+`IConfig`
+```ts
+interface IConfig {
+  apiUrl: string
+  timeout: number
+  isEnabled: boolean
+  retryAttempts: number
+}
+```
+
+`example.ts`
+```ts
+type ConfigNumbers = EnumKeys<IConfig, number> // 'timeout' | 'retryAttempts'
+```
+
+---
+
+### `Callback<Args, ReturnType>`
+
+Constructs a generic `Function`-like type with typed arguments and the return value.
+
+<br>
 
 ```
 
