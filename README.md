@@ -236,7 +236,7 @@ Constructs a generic `Function`-*like* type with typed arguments and the return 
 ```ts
 function process(items: number[], callback: Func<number, boolean>): boolean {
   // shortened for brevity
-  // DO NOT access your Array like this :)
+  // do NOT access your Array immediately :)
   for (let i = 0; i < items.length; i++) {
     if (callback(items[i])) {
       return true
