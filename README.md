@@ -304,7 +304,7 @@ const id: ProperId = '   ID    ' // ERROR: does NOT accept leading nor trailing 
 <br>
 
 > [!TIP]
-> A very cool usage of the [`Trim\<Input>`](#triminput) type is implemented in the [`magic-querySelector`](https://github.com/igorskyflyer/npm-magic-queryselector) project.
+> A very cool usage of the [`Trim<Input>`](#triminput) type is implemented in the [`magic-querySelector`](https://github.com/igorskyflyer/npm-magic-queryselector) project.
 >
 
 ---
