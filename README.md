@@ -298,7 +298,7 @@ Recursively removes all leading and trailing whitespace from a `String` type `In
 type Id = '    ID     '
 type ProperId = Trim<Id>
 
-const id: ProperId = '   ID    ' // ERROR: does NOT accept leading whitespace
+const id: ProperId = '   ID    ' // ERROR: does NOT accept leading nor trailing whitespace
 ```
 
 <br>
