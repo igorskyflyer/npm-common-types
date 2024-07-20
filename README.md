@@ -232,6 +232,7 @@ Constructs a generic `Function`-*like* type with typed arguments and the return 
 
 <br>
 
+`example.ts`
 ```ts
 function process(items: number[], callback: Func<number, boolean>): boolean {
   // shortened for brevity
@@ -262,10 +263,82 @@ Alias of [`Func<Args, ReturnType>`](#funcargs-returntype).
 
 ---
 
+### `TrimLeft<Input>`
+
+Recursively removes all leading whitespace from a `String` type `Input`.
+
+`example.ts`
+```ts
+type Id = '    ID'
+type ProperId = TrimLeft<Id>
+
+const id: ProperId = '   ID' // ERROR: does NOT accept leading whitespace
+```
+---
+
+### `TrimRight<Input>`
+
+Recursively removes all trailing whitespace from a `String` type `Input`.
+
+`example.ts`
+```ts
+type Id = 'ID     '
+type ProperId = TrimRight<Id>
+
+const id: ProperId = 'ID    ' // ERROR: does NOT accept leading whitespace
+```
+---
+
+### `Trim<Input>`
+
+Recursively removes all leading and trailing whitespace from a `String` type `Input`.
+
+`example.ts`
+```ts
+type Id = '    ID     '
+type ProperId = Trim<Id>
+
+const id: ProperId = '   ID    ' // ERROR: does NOT accept leading whitespace
+```
+
+<br>
+
+> [!TIP]
+> A very cool usage of the [`Trim<Input>`] type is implemented in the [`magic-querySelector`](https://github.com/igorskyflyer/npm-magic-queryselector) project.
+>
+
+---
+
 ## ✨ Examples
 
 `utils.ts`
 ```ts
+import type { Callback } from '@igor.dvlpr/common-types'
+
+function process(
+  items: number[],
+  callback: Callback<number, boolean>
+): boolean {
+  // shortened for brevity
+  // DO NOT access your Array like this :)
+  for (let i = 0; i < items.length; i++) {
+    if (callback(items[i])) {
+      return true
+    }
+  }
+
+  return false
+}
+
+const result = process([1, 1, 8, 1], (item) => {
+  if (item % 2 === 0) {
+    return true
+  }
+
+  return false
+}) // returns true
+
+console.log(result)
 
 ```
 
