@@ -245,7 +245,7 @@ function process(items: number[], callback: Func<number, boolean>): boolean {
   return false
 }
 
-process([1, 1, 8, 1], (item): boolean => {
+process([1, 1, 8, 1], (item) => {
   if (item % 2 === 0) {
     return true
   }
