@@ -85,25 +85,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/windev](https://www.npmjs.com/package/@igor.dvlpr/windev)
 
-> __
+> _🍃 Provides ways of checking whether a path is a legacy Windows device. 💾_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/magic-queryselector](https://www.npmjs.com/package/@igor.dvlpr/magic-queryselector)
 
-[]()
+> _🪄 A TypeScript-types patch for querySelector/querySelectorAll, make them return types you expect them to! 🔮_
 
-> __
+<br>
 
-[]()
+[@igor.dvlpr/jmap](https://www.npmjs.com/package/@igor.dvlpr/jmap)
 
-> __
+> _🕶️ Reads a JSON file into a Map. 🌻_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/node-clone-js](https://www.npmjs.com/package/@igor.dvlpr/node-clone-js)
+
+> _🧬 A lightweight JavaScript utility allowing deep copy-by-value of nested objects, arrays and arrays of objects. 🪁_
+
+<br>
+
+[@igor.dvlpr/extendable-string](https://www.npmjs.com/package/@igor.dvlpr/extendable-string)
+
+> _🦀 ExtendableString allows you to create strings on steroids that have custom transformations applied to them, unlike common, plain strings.. 🪀_
 
 ---
 
