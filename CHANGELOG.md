@@ -1,6 +1,6 @@
 ## 📒 Changelog
 
-### of [@igor.dvlpr/$pkg](https://github.com/igorskyflyer/$repo)
+### of [@igor.dvlpr/common-types](https://github.com/igorskyflyer/npm-common-types)
 
 <br>
 
