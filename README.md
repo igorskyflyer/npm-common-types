@@ -228,7 +228,7 @@ type ConfigNumbers = EnumKeys<IConfig, number> // 'timeout' | 'retryAttempts'
 
 ### `Func<Args, ReturnType>`
 
-Constructs a generic `Function`-like type with typed arguments and the return value.
+Constructs a generic `Function`-*like* type with typed arguments and the return value.
 
 <br>
 
