@@ -72,6 +72,7 @@ Extract all keys from an object.
 
 <br>
 
+`example.ts`
 ```ts
 type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
 ```
@@ -90,6 +91,7 @@ Extract all methods from an object.
 
 <br>
 
+`example.ts`
 ```ts
 type NumberMethods = MethodsOf<Number> // 'toString' | 'toFixed' | 'toExponential' | 'toPrecision' | 'valueOf' | 'toLocaleString'
 ```
@@ -108,6 +110,7 @@ Extract all properties from an object.
 
 <br>
 
+`example.ts`
 ```ts
 type StringProperties = PropertiesOf<String> // number | 'length'
 ```
@@ -121,13 +124,36 @@ Constructs a type with all top-level and nested properties of `Type` set to opti
 <br>
 
 > [!TIP]
-> See also TypeScript's built-in utility [`Partial<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype) ![An external link](https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/external.svg)
+> See also TypeScript's built-in utility type [`Partial<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype) ![An external link](https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/external.svg)
 >
 
 <br>
 
+`IPerson.ts`
 ```ts
-type StringProperties = DeepPartial<String> // number | 'length'
+interface IPerson {
+  name: string
+  address: {
+    city: string
+    zip: number
+  }
+}
+```
+
+`example.ts`
+```ts
+type PersonOptional = DeepPartial<IPerson>
+
+/**
+ * PersonOptional:
+ *  {
+ *    name?: string
+ *    address?: {
+ *      city?: string
+ *      zip?: number
+ *    }
+ *  }
+ */
 ```
 
 ---
