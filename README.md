@@ -194,7 +194,7 @@ const promiseValue: Promisable<number> = Promise.resolve(42)
 
 async function handleValue(value: Promisable<number>) {
   const result = await processValue(value)
-  console.log(result) // Will log the number 42, whether `value` was a direct number or a Promise resolving to 42
+  console.log(result) // Will log the number 42, whether value was a direct number or a Promise resolving to 42
 }
 
 handleValue(immediateValue)
@@ -320,7 +320,7 @@ function process(
   callback: Callback<number, boolean>
 ): boolean {
   // shortened for brevity
-  // DO NOT access your Array like this :)
+  // do NOT access your Array immediately :)
   for (let i = 0; i < items.length; i++) {
     if (callback(items[i])) {
       return true
