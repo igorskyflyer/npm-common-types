@@ -49,6 +49,7 @@
   - [TrimLeft\<Input>](#trimleftinput)
   - [TrimRight\<Input>](#trimrightinput)
   - [Trim\<Input>](#triminput)
+  - [IsGeneric\<Type>](#isgenerictype)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -319,6 +320,16 @@ const id: ProperId = '   ID    ' // ERROR: does NOT accept leading nor trailing 
 > A very cool usage of the [`Trim<Input>`](#triminput) type is implemented in the [`magic-querySelector`](https://github.com/igorskyflyer/npm-magic-queryselector) project.
 >
 
+---
+
+### `IsGeneric<Type>`
+
+Returns a Boolean whether the type `Type` is a generic.
+
+`example.ts`
+```ts
+type ArrayIsGeneric: IsGeneric<Array<string>> // true
+```
 ---
 
 ## ✨ Examples
