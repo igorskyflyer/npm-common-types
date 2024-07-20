@@ -53,19 +53,36 @@
 Install it by executing:
 
 ```shell
-npm i "@igor.dvlpr/common-types"
+npm i -D "@igor.dvlpr/common-types"
 ```
 
 <br>
 
 ## 🤹🏼 API
 
+### `KeysOf<Obj>`
+
+Extract all keys from an object.
+
+
+<br>
+
+> [!TIP] 
+> **Can** be used with generics as well.
+>
+
+<br>
+
+```ts
+type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
+```
+
 ---
 
 ## ✨ Examples
 
-``
-```
+`utils.mts`
+```ts
 
 ```
 
