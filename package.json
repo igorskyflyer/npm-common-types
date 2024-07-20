@@ -1,51 +1,47 @@
 {
-	"name": "@igor.dvlpr/common-types",
-	"version": "1.0.0",
-	"description": "🔦 Provides frequently used types for your TypeScript projects. 🫏",
-	"sideEffects": false,
-	"engines": {
-		"node": ">=20.0"
-	},
-	"types": "./dist/index.d.mts",
-	"main": "./dist/index.mjs",
-	"module": "./dist/index.mjs",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "tsc",
-		"test": "vitest --run",
-		"debug": "vitest",
-		"pub": "npm test && npm run build && npm publish --access public"
-	},
-	"keywords": [
-		"common",
-		"types",
-		"typescript",
-		"javascript",
-		"utility",
-		"useful",
-		"tool",
-		"methods",
-		"properties",
-		"keys",
-		"igorskyflyer",
-		"igor.dvlpr"
-	],
-	"license": "MIT",
-	"author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
-	"funding": "https://ko-fi.com/igorskyflyer",
-	"homepage": "https://github.com/igorskyflyer/npm-common-types",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/igorskyflyer/npm-common-types.git"
-	},
-	"bugs": {
-		"url": "https://github.com/igorskyflyer/npm-common-types/issues"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^1.8.3",
-		"@types/node": "^20.14.11",
-		"typescript": "^5.5.3"
-	}
+  "name": "@igor.dvlpr/common-types",
+  "version": "1.0.0",
+  "description": "🔦 Provides frequently used types for your TypeScript projects. 🫏",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0"
+  },
+  "types": "./dist/index.d.mts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "pub": "npm run build && npm publish --access public"
+  },
+  "keywords": [
+    "common",
+    "types",
+    "typescript",
+    "javascript",
+    "utility",
+    "useful",
+    "tool",
+    "methods",
+    "properties",
+    "keys",
+    "igorskyflyer",
+    "igor.dvlpr"
+  ],
+  "license": "MIT",
+  "author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
+  "funding": "https://ko-fi.com/igorskyflyer",
+  "homepage": "https://github.com/igorskyflyer/npm-common-types",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorskyflyer/npm-common-types.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igorskyflyer/npm-common-types/issues"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/node": "^20.14.11",
+    "typescript": "^5.5.3"
+  }
 }
