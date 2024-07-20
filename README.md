@@ -64,7 +64,6 @@ npm i -D "@igor.dvlpr/common-types"
 
 Extract all keys from an object.
 
-
 <br>
 
 > [!TIP] 
@@ -75,6 +74,60 @@ Extract all keys from an object.
 
 ```ts
 type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
+```
+
+---
+
+### `MethodsOf<Obj>`
+
+Extract all methods from an object.
+
+<br>
+
+> [!CAUTION] 
+> Can **NOT** be used with generics.
+>
+
+<br>
+
+```ts
+type NumberMethods = MethodsOf<Number> // 'toString' | 'toFixed' | 'toExponential' | 'toPrecision' | 'valueOf' | 'toLocaleString'
+```
+
+---
+
+### `PropertiesOf<Obj>`
+
+Extract all properties from an object.
+
+<br>
+
+> [!CAUTION] 
+> Can **NOT** be used with generics.
+>
+
+<br>
+
+```ts
+type StringProperties = PropertiesOf<String> // number | 'length'
+```
+
+---
+
+### `DeepPartial<Type>`
+
+Constructs a type with all top-level and nested properties of `Type` set to optional.
+
+<br>
+
+> [!TIP]
+> See also TypeScript's built-in utility [`Partial<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype) ![An external link](https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/external.svg)
+>
+
+<br>
+
+```ts
+type StringProperties = DeepPartial<String> // number | 'length'
 ```
 
 ---
