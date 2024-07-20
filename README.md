@@ -1,9 +1,9 @@
-<h1 align="center">$project</h1>
+<h1 align="center">CommonTypes</h1>
 
 <br>
 
 <p align="center">
-	$desc
+	🔦 Provides frequently used types for your TypeScript projects. 🫏
 </p>
 
 <br>
@@ -53,7 +53,7 @@
 Install it by executing:
 
 ```shell
-npm i "@igor.dvlpr/$pkg"
+npm i "@igor.dvlpr/common-types"
 ```
 
 <br>
@@ -73,13 +73,13 @@ npm i "@igor.dvlpr/$pkg"
 
 ## 📝 Changelog
 
-> 📑 Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/$repo/blob/main/CHANGELOG.md).
+📑 Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-common-types/blob/main/CHANGELOG.md).
 
 ---
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/$repo/blob/main/LICENSE).
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-common-types/blob/main/LICENSE).
 
 ---
 
