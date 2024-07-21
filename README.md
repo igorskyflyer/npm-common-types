@@ -44,8 +44,8 @@
   - [DeepPartial\<Type>](#deeppartialtype)
   - [Promisable\<Type>](#promisabletype)
   - [EnumKeys\<Type, KeyType>](#enumkeystype-keytype)
-  - [Func<Args, ReturnType>](#funcargs-returntype)
-  - [Callback<Args, ReturnType>](#callbackargs-returntype)
+  - [Func<Args, FnReturn>](#funcargs-fnreturn)
+  - [Callback<Args, FnReturn>](#callbackargs-fnreturn)
   - [TrimLeft\<Input>](#trimleftinput)
   - [TrimRight\<Input>](#trimrightinput)
   - [Trim\<Input>](#triminput)
@@ -240,7 +240,7 @@ type ConfigNumbers = EnumKeys<IConfig, number> // 'timeout' | 'retryAttempts'
 
 ---
 
-### `Func<Args, ReturnType>`
+### `Func<Args, FnReturn>`
 
 Constructs a generic `Function`-*like* type with typed arguments and the return value.
 
@@ -271,9 +271,9 @@ process([1, 1, 8, 1], (item) => {
 
 ---
 
-### `Callback<Args, ReturnType>`
+### `Callback<Args, FnReturn>`
 
-Alias of [`Func<Args, ReturnType>`](#funcargs-returntype).
+Alias of [`Func<Args, FnReturn>`](#funcargs-fnreturn).
 
 ---
 
@@ -341,7 +341,7 @@ Gets the method signature `Method` of type `Type`.
 `example.ts`
 ```ts
 type NumberToFixedMethod = MethodSignature<Number, 'toFixed'>
-const newMethod: NumberToFixedMethod // returns (fractionDigits?: number) => string
+const newMethod: NumberToFixedMethod // expects (fractionDigits?: number) => string
 ```
 ---
 
