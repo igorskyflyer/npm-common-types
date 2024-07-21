@@ -50,6 +50,7 @@
   - [TrimRight\<Input>](#trimrightinput)
   - [Trim\<Input>](#triminput)
   - [IsGeneric\<Type>](#isgenerictype)
+  - [MethodSignature\<Type, Method>](#methodsignaturetype-method)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -330,6 +331,17 @@ Returns a Boolean whether the type `Type` is a generic.
 ```ts
 type ArrayIsGeneric = IsGeneric<Array<string>> // true
 type NumberIsGeneric = IsGeneric<number> // false
+```
+---
+
+### `MethodSignature<Type, Method>`
+
+Gets the method signature `Method` of type `Type`.
+
+`example.ts`
+```ts
+type NumberToFixedMethod = MethodSignature<Number, 'toFixed'>
+const newMethod: NumberToFixedMethod // returns (fractionDigits?: number) => string
 ```
 ---
 
