@@ -4,6 +4,20 @@
 
 <br>
 
+## v1.2.0
+
+<p align="right"><em>21-Jul-2024</em></p>
+
+- **🪅 feat**: implement [`MethodSignature<Type, Method>`](./README.md#methodsignaturetype-method)
+
+<br>
+
+- **✅ fix**: fix edge-cases with [`MethodsOf<Type>`](./README.md#methodsoftype)
+- **✅ fix**: fix edge-cases with [`PropertiesOf<Type>`](./README.md#propertiesoftype)
+
+<br>
+<br>
+
 ## v1.1.0
 
 <p align="right"><em>20-Jul-2024</em></p>
