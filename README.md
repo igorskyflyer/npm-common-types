@@ -424,5 +424,7 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ---
 
+<br>
+
 ### 👨🏻‍💻 Author
 Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
