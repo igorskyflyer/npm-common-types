@@ -12,6 +12,8 @@
 
 <br>
 
+- **✅ fix**: rename type parameter in [`Func<Args, FnReturn>`](./README#funcargs-fnreturn)
+- **✅ fix**: rename type parameter in [`Callback<Args, FnReturn>`](./README.md#callbackargs-fnreturn)
 - **✅ fix**: fix edge-cases with [`MethodsOf<Type>`](./README.md#methodsoftype)
 - **✅ fix**: fix edge-cases with [`PropertiesOf<Type>`](./README.md#propertiesoftype)
 
