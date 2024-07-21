@@ -149,7 +149,7 @@ Extracts all properties from a `Type`.
 
 `example.ts`
 ```ts
-type StringProperties = PropertiesOf<String> // number | 'length'
+type StringProperties = PropertiesOf<String> // 'length'
 ```
 
 ---
