@@ -3,12 +3,20 @@
 export type KeysOf<Type> = keyof Type
 export type TypeOfValues<Type> = Type[keyof Type]
 
-export type MethodsOf<Type> = {
-  [Key in keyof Type]: Type[Key] extends Function ? Key : never
+export type MethodsOf<Type extends object> = {
+  [Key in KeysOf<Type>]: Key extends string
+    ? Type[Key] extends Func
+      ? Key
+      : never
+    : never
 }[keyof Type]
 
 export type PropertiesOf<Type extends object> = {
-  [Key in keyof Type]: Type[Key] extends Function ? never : Key
+  [Key in KeysOf<Type>]: Key extends string
+    ? Type[Key] extends Func
+      ? never
+      : Key
+    : never
 }[keyof Type]
 
 export type DeepPartial<Type> = {
@@ -23,12 +31,10 @@ export type EnumKeys<Type extends object, KeyType> = {
   [K in keyof Type]: Type[K] extends KeyType ? K : never
 }[keyof Type]
 
-export type Func<Args = any, ReturnType = void> = (
-  ...args: Args[]
-) => ReturnType
+export type Func<Args = any, FnReturn = void> = (...args: Args[]) => FnReturn
 
 // alias of Func<T, R>
-export type Callback<Args = any, ReturnType = void> = Func<Args, ReturnType>
+export type Callback<Args = any, FnReturn = void> = Func<Args, FnReturn>
 
 export type TrimLeft<Input extends string> = Input extends ` ${infer Rest}`
   ? TrimLeft<Rest>
@@ -49,3 +55,8 @@ export type IsGeneric<Type> = Type extends infer Inferred
     ? true
     : false
   : false
+
+export type MethodSignature<
+  Type extends object,
+  Method extends MethodsOf<Type>
+> = Type[Method] extends Func ? Type[Method] : never
