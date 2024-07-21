@@ -1,7 +1,7 @@
 {
   "name": "@igor.dvlpr/common-types",
-  "version": "1.1.0",
-  "description": "🔦 Provides frequently used types for your TypeScript projects. 🫏",
+  "version": "1.2.0",
+  "description": "🔦 Provides frequently used types for your TypeScript projects. 🦄",
   "sideEffects": false,
   "engines": {
     "node": ">=20.0"
