@@ -14,6 +14,10 @@
 - **🪅 feat**: implement [`MethodName<Type, Method>`](./README.md#methodnametype-method)
 
 <br>
+
+- **💻 dev**: add JSDocs
+
+<br>
 <br>
 
 ## v1.2.0
