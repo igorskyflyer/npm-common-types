@@ -65,6 +65,7 @@ export type Override<
   Type extends object,
   Changes extends { [Key in keyof Type]?: unknown }
 > = Omit<Type, keyof Changes> & Changes
+
 export type Extend<Type extends object, Changes extends object> = Type & Changes
 
 export type MethodName<
