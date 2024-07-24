@@ -450,13 +450,14 @@ interface IPerson {
 
 `example.ts`
 ```ts
-type NewPerson = Extend<IPerson, { name: string }> //only accepts non-existing keys, will return `never` here
+type NewPerson = Extend<IPerson, { name: string }> //only accepts non-existing keys
+// will return `never` here
 const newPerson: NewPerson = {
   name: 'John Doe',
   children: 2
 } // will error
 
-type NewestPerson = Extend<IPerson, { profession: string }> //only accepts non-existing properties/methods
+type NewestPerson = Extend<IPerson, { profession: string }> //only accepts non-existing keys
 const newestPerson: NewestPerson = {
   name: 'John Doe',
   children: 2,
