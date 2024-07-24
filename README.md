@@ -51,6 +51,10 @@
   - [Trim\<Input>](#triminput)
   - [IsGeneric\<Type>](#isgenerictype)
   - [MethodSignature\<Type, Method>](#methodsignaturetype-method)
+  - [Override\<Type, Changes>](#overridetype-changes)
+  - [HasOverlap\<FirstType, SecondType>](#hasoverlapfirsttype-secondtype)
+  - [Extend\<Type, Changes>](#extendtype-changes)
+  - [MethodName\<Type, Method>](#methodnametype-method)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -108,6 +112,8 @@ interface IPerson {
   isMember: boolean
 }
 ```
+
+<br>
 
 `example.ts`
 ```ts
@@ -177,6 +183,8 @@ interface IPerson {
 }
 ```
 
+<br>
+
 `example.ts`
 ```ts
 type PersonOptional = DeepPartial<IPerson>
@@ -233,6 +241,8 @@ interface IConfig {
 }
 ```
 
+<br>
+
 `example.ts`
 ```ts
 type ConfigNumbers = EnumKeys<IConfig, number> // 'timeout' | 'retryAttempts'
@@ -281,6 +291,8 @@ Alias of [`Func<Args, FnReturn>`](#funcargs-fnreturn).
 
 Recursively removes all leading whitespace from a `String` type `Input`.
 
+<br>
+
 `example.ts`
 ```ts
 type Id = '    ID'
@@ -294,6 +306,8 @@ const id: ProperId = '   ID' // ERROR: does NOT accept leading whitespace
 
 Recursively removes all trailing whitespace from a `String` type `Input`.
 
+<br>
+
 `example.ts`
 ```ts
 type Id = 'ID     '
@@ -306,6 +320,8 @@ const id: ProperId = 'ID    ' // ERROR: does NOT accept leading whitespace
 ### `Trim<Input>`
 
 Recursively removes all leading and trailing whitespace from a `String` type `Input`.
+
+<br>
 
 `example.ts`
 ```ts
@@ -327,6 +343,8 @@ const id: ProperId = '   ID    ' // ERROR: does NOT accept leading nor trailing 
 
 Returns a Boolean whether the type `Type` is a generic.
 
+<br>
+
 `example.ts`
 ```ts
 type ArrayIsGeneric = IsGeneric<Array<string>> // true
@@ -338,11 +356,127 @@ type NumberIsGeneric = IsGeneric<number> // false
 
 Gets the method signature `Method` of type `Type`.
 
+<br>
+
 `example.ts`
 ```ts
-type NumberToFixedMethod = MethodSignature<Number, 'toFixed'>
-const newMethod: NumberToFixedMethod // expects (fractionDigits?: number) => string
+type NumberToFixedMethod = MethodSignature<Number, 'toFixed'> // expects (fractionDigits?: number) => string
 ```
+
+---
+
+### `Override<Type, Changes>`
+
+Overrides the type `Type` with the new type of `Changes`.
+
+<br>
+
+`IPerson`
+```ts
+interface IPerson {
+  name: string
+  children: boolean
+}
+```
+
+<br>
+
+`example.ts`
+```ts
+const person: IPerson = {
+  name:'John Doe',
+  children: true
+}
+
+type NewPerson = Override<IPerson, { children: number }> //only accepts existing properties/methods
+
+const newPerson: NewPerson = {
+  name:'John Doe',
+  children: 2
+}
+```
+
+---
+
+### `HasOverlap<FirstType, SecondType>`
+
+Checks whether the types `FirstType` and `SecondType` overlap, i.e. have the same keys.
+
+<br>
+
+> [!WARNING]
+> It only checks the key names not their types!
+>
+
+<br>
+
+`IPerson`
+```ts
+interface IPerson {
+  name: string
+  children: boolean
+}
+```
+
+<br>
+
+`example.ts`
+```ts
+type PersonOverlap = HasOverlap<
+  IPerson,
+  {
+    name: string
+    children: boolean
+  }
+> // returns true
+```
+---
+
+### `Extend<Type, Changes>`
+
+Extends the type `Type` with the new type of `Changes` with only non-existent keys in type `Type`.
+
+<br>
+
+`IPerson`
+```ts
+interface IPerson {
+  name: string
+  children: number
+}
+```
+
+<br>
+
+`example.ts`
+```ts
+type NewPerson = Extend<IPerson, { name: string }> //only accepts non-existing properties/methods, will return `never` here
+const newPerson: NewPerson = {
+  name: 'John Doe',
+  children: 2
+} // will error
+
+type NewestPerson = Extend<IPerson, { profession: string }> //only accepts non-existing properties/methods
+const newestPerson: NewestPerson = {
+  name: 'John Doe',
+  children: 2,
+  profession: 'Developer'
+} // will NOT error
+```
+
+---
+
+### `MethodName<Type, Method>`
+
+Checks for the existence of the method `Method` in the type of `Type` and returns it if found.
+
+<br>
+
+`example.ts`
+```ts
+type NumberToFixedMethod = MethodName<Number, 'toFixed'> // toFixed
+```
+
 ---
 
 ## ✨ Examples
