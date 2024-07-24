@@ -388,7 +388,7 @@ const person: IPerson = {
   children: true
 }
 
-type NewPerson = Override<IPerson, { children: number }> //only accepts existing properties/methods
+type NewPerson = Override<IPerson, { children: number }> //only accepts existing keys
 
 const newPerson: NewPerson = {
   name:'John Doe',
@@ -405,7 +405,7 @@ Checks whether the types `FirstType` and `SecondType` overlap, i.e. have the sam
 <br>
 
 > [!WARNING]
-> It only checks the key names not their types!
+> It only checks the key names, not their types!
 >
 
 <br>
@@ -450,7 +450,7 @@ interface IPerson {
 
 `example.ts`
 ```ts
-type NewPerson = Extend<IPerson, { name: string }> //only accepts non-existing properties/methods, will return `never` here
+type NewPerson = Extend<IPerson, { name: string }> //only accepts non-existing keys, will return `never` here
 const newPerson: NewPerson = {
   name: 'John Doe',
   children: 2
