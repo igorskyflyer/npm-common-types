@@ -66,9 +66,9 @@ export type Override<
   Changes extends { [Key in KeysOf<Type>]?: unknown }
 > = Omit<Type, keyof Changes> & Changes
 
-type HasOverlap<Type, Changes> = {
-  [Key in keyof Changes]: Key extends keyof Type ? true : false
-}[keyof Changes] extends true
+type HasOverlap<FirstType, SecondType> = {
+  [Key in keyof SecondType]: Key extends keyof FirstType ? true : false
+}[keyof SecondType] extends true
   ? true
   : false
 
