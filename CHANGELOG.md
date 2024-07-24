@@ -4,6 +4,18 @@
 
 <br>
 
+## v1.3.0
+
+<p align="right"><em>24-Jul-2024</em></p>
+
+- **🪅 feat**: implement [`Override<Type, Changes>`](./README.md#overridetype-changes)
+- **🪅 feat**: implement [`HasOverlap<FirstType, SecondType>`](./README.md#hasoverlapfirsttype-secondtype)
+- **🪅 feat**: implement [`Extend<Type, Changes>`](./README.md#extendtype-changes)
+- **🪅 feat**: implement [`MethodName<Type, Method>`](./README.md#methodnametype-method)
+
+<br>
+<br>
+
 ## v1.2.0
 
 <p align="right"><em>21-Jul-2024</em></p>
