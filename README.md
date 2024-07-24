@@ -405,7 +405,7 @@ Checks whether the types `FirstType` and `SecondType` overlap, i.e. have the sam
 <br>
 
 > [!WARNING]
-> It only checks the key names, not their types!
+> It only checks the key names, **NOT** their **TYPES**!
 >
 
 <br>
