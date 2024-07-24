@@ -80,7 +80,7 @@ npm i -D "@igor.dvlpr/common-types"
 
 ### `KeysOf<Type>`
 
-Extracts all keys from a `Type`.
+Extracts all keys from the type `Type`.
 
 <br>
 
@@ -99,7 +99,7 @@ type ArrayKeys = KeysOf<Array<string>> // 'at' | 'concat' | 'copyWithin', etc.
 
 ### `TypeOfValues<Type>`
 
-Extracts all value types of a `Type`. Works with top-level properties only.
+Extracts all value types of the type `Type`. Works with top-level properties only.
 
 <br>
 
@@ -124,7 +124,7 @@ type ValueTypes = TypeOfValues<IPerson> // string | number | boolean
 
 ### `MethodsOf<Type>`
 
-Extracts all methods from a `Type`.
+Extracts all methods from the type `Type`.
 
 <br>
 
@@ -143,7 +143,7 @@ type NumberMethods = MethodsOf<Number> // 'toString' | 'toFixed' | 'toExponentia
 
 ### `PropertiesOf<Type>`
 
-Extracts all properties from a `Type`.
+Extracts all properties from the type `Type`.
 
 <br>
 
@@ -162,7 +162,7 @@ type StringProperties = PropertiesOf<String> // 'length'
 
 ### `DeepPartial<Type>`
 
-Constructs a type with all top-level and nested properties of `Type` set to optional.
+Constructs a type with all top-level and nested properties of the type `Type` set to optional.
 
 <br>
 
@@ -227,7 +227,7 @@ handleValue(promiseValue)
 
 ### `EnumKeys<Type, KeyType>`
 
-Extracts all keys from a `Type` that are of type `KeyType`.
+Extracts all keys from the `Type` that are of the type `KeyType`.
 
 <br>
 
@@ -252,7 +252,7 @@ type ConfigNumbers = EnumKeys<IConfig, number> // 'timeout' | 'retryAttempts'
 
 ### `Func<Args, FnReturn>`
 
-Constructs a generic `Function`-*like* type with typed arguments and the return value.
+Constructs a generic `Function`-*like* type with the arguments of type `Args` and the return value of type `FnReturn`.
 
 <br>
 
@@ -289,7 +289,7 @@ Alias of [`Func<Args, FnReturn>`](#funcargs-fnreturn).
 
 ### `TrimLeft<Input>`
 
-Recursively removes all leading whitespace from a `String` type `Input`.
+Recursively removes all leading whitespace from the `String` type `Input`.
 
 <br>
 
@@ -304,7 +304,7 @@ const id: ProperId = '   ID' // ERROR: does NOT accept leading whitespace
 
 ### `TrimRight<Input>`
 
-Recursively removes all trailing whitespace from a `String` type `Input`.
+Recursively removes all trailing whitespace from the `String` type `Input`.
 
 <br>
 
@@ -319,7 +319,7 @@ const id: ProperId = 'ID    ' // ERROR: does NOT accept leading whitespace
 
 ### `Trim<Input>`
 
-Recursively removes all leading and trailing whitespace from a `String` type `Input`.
+Recursively removes all leading and trailing whitespace from the `String` type `Input`.
 
 <br>
 
@@ -354,7 +354,7 @@ type NumberIsGeneric = IsGeneric<number> // false
 
 ### `MethodSignature<Type, Method>`
 
-Gets the method signature `Method` of type `Type`.
+Gets the method signature `Method` of the type `Type`.
 
 <br>
 
