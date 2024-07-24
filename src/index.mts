@@ -63,10 +63,21 @@ export type MethodSignature<
 
 export type Override<
   Type extends object,
-  Changes extends { [Key in keyof Type]?: unknown }
+  Changes extends { [Key in KeysOf<Type>]?: unknown }
 > = Omit<Type, keyof Changes> & Changes
 
-export type Extend<Type extends object, Changes extends object> = Type & Changes
+type HasOverlap<Type, Changes> = {
+  [Key in keyof Changes]: Key extends keyof Type ? true : false
+}[keyof Changes] extends true
+  ? true
+  : false
+
+export type Extend<Type extends object, Changes extends object> = HasOverlap<
+  Type,
+  Changes
+> extends true
+  ? never
+  : Type & Changes
 
 export type MethodName<
   Type extends object,
