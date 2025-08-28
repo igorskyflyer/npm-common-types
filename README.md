@@ -93,7 +93,8 @@ Extracts all keys from the type `Type`.
 
 <br>
 
-> [!TIP] 
+> 💡 **TIP**
+>
 > **CAN** be used with generics as well.
 >
 
@@ -137,7 +138,8 @@ Extracts all methods from the type `Type`.
 
 <br>
 
-> [!CAUTION] 
+> 🛑 **CAUTION**
+>
 > Can **NOT** be used with generics.
 >
 
@@ -156,7 +158,8 @@ Extracts all properties from the type `Type`.
 
 <br>
 
-> [!CAUTION] 
+> 🛑 **CAUTION**
+>
 > Can **NOT** be used with generics.
 >
 
@@ -175,7 +178,8 @@ Constructs a type with all top-level and nested properties of the type `Type` se
 
 <br>
 
-> [!TIP]
+> 💡 **TIP**
+>
 > See also TypeScript's built-in utility type [`Partial<Type>`](https://www.typescriptlang.org/docs/handbook/utility-types.html#partialtype) ![An external link](https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/external.svg).
 >
 
@@ -342,7 +346,8 @@ const id: ProperId = '   ID    ' // ERROR: does NOT accept leading nor trailing 
 
 <br>
 
-> [!TIP]
+> 💡 **TIP**
+>
 > A very cool usage of the [`Trim<Input>`](#triminput) type is implemented in the [`magic-querySelector`](https://github.com/igorskyflyer/npm-magic-queryselector) project.
 >
 
@@ -413,7 +418,8 @@ Checks whether the types `FirstType` and `SecondType` overlap, i.e. have the sam
 
 <br>
 
-> [!WARNING]
+> ⚠️ **WARNING**
+>
 > It only checks the key names, **NOT** their **TYPES**!
 >
 
@@ -489,7 +495,7 @@ type NumberToFixedMethod = MethodName<Number, 'toFixed'> // toFixed
 
 ---
 
-## ✨ Examples
+## 🗒️ Examples
 
 `utils.ts`
 ```ts
