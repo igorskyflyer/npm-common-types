@@ -1,17 +1,15 @@
-## 📒 Changelog
+# 📒 Changelog
 
-### of [@igor.dvlpr/common-types](https://github.com/igorskyflyer/npm-common-types)
+### of [@igorskyflyer/common-types](https://github.com/igorskyflyer/npm-common-types)
 
 <br>
 
-## v1.3.0
+## v1.3.0 (*24-Jul-2024*)
 
-<p align="right"><em>24-Jul-2024</em></p>
-
-- **🪅 feat**: implement [`Override<Type, Changes>`](./README.md#overridetype-changes)
-- **🪅 feat**: implement [`HasOverlap<FirstType, SecondType>`](./README.md#hasoverlapfirsttype-secondtype)
-- **🪅 feat**: implement [`Extend<Type, Changes>`](./README.md#extendtype-changes)
-- **🪅 feat**: implement [`MethodName<Type, Method>`](./README.md#methodnametype-method)
+- **✨ feat**: implement [`Override<Type, Changes>`](./README.md#overridetype-changes)
+- **✨ feat**: implement [`HasOverlap<FirstType, SecondType>`](./README.md#hasoverlapfirsttype-secondtype)
+- **✨ feat**: implement [`Extend<Type, Changes>`](./README.md#extendtype-changes)
+- **✨ feat**: implement [`MethodName<Type, Method>`](./README.md#methodnametype-method)
 
 <br>
 
@@ -20,11 +18,9 @@
 <br>
 <br>
 
-## v1.2.0
+## v1.2.0 (*21-Jul-2024*)
 
-<p align="right"><em>21-Jul-2024</em></p>
-
-- **🪅 feat**: implement [`MethodSignature<Type, Method>`](./README.md#methodsignaturetype-method)
+- **✨ feat**: implement [`MethodSignature<Type, Method>`](./README.md#methodsignaturetype-method)
 
 <br>
 
@@ -36,17 +32,13 @@
 <br>
 <br>
 
-## v1.1.0
+## v1.1.0 (*20-Jul-2024*)
 
-<p align="right"><em>20-Jul-2024</em></p>
-
-- **🪅 feat**: add [`IsGeneric`](./README.md#isgenerictype) type
+- **✨ feat**: add [`IsGeneric`](./README.md#isgenerictype) type
 
 <br>
 <br>
 
-## v1.0.0
-
-<p align="right"><em>20-Jul-2024</em></p>
+## v1.0.0 (*20-Jul-2024*)
 
 - **🚀 launch**: initial release 🎉
