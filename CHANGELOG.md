@@ -4,7 +4,7 @@
 
 <br>
 
-## v1.4.0 (*28-Aug-2024*)
+## v1.4.0 (*28-Aug-2025*)
 
 - **💻 dev**: upgrade Node to >= v22
 - **💻 dev**: upgrade dependencies
