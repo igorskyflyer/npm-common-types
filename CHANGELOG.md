@@ -4,6 +4,13 @@
 
 <br>
 
+## v1.4.0 (*28-Aug-2024*)
+
+- **💻 dev**: upgrade Node to >= v22
+- **💻 dev**: upgrade dependencies
+
+<br>
+
 ## v1.3.0 (*24-Jul-2024*)
 
 - **✨ feat**: implement [`Override<Type, Changes>`](./README.md#overridetype-changes)
