@@ -1,41 +1,20 @@
-<h1 align="center">CommonTypes</h1>
-
-<br>
-
-<p align="center">
-  🔦 Provides frequently used types for your TypeScript projects. 🫏
-</p>
-
-<br>
-<br>
-
 <div align="center">
-  <blockquote>
-    <br>
-    <h4>💖 Support further development</h4>
-    <span>I work hard for every project, including this one and your support means a lot to me!
-    <br>
-    Consider buying me a coffee. ☕
-    <br>
-    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
-    <br>
-    <br>
-    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
-    <br>
-    <br>
-    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
-    <br>
-    <br>
-    <br>
-  </blockquote>
+  <img src="https://raw.githubusercontent.com/igorskyflyer/npm-common-types/main/media/common-types.png" alt="Icon of Common Types" width="256" height="256">
+  <h1>Common Types</h1>
 </div>
 
 <br>
+
+<h4 align="center">
+  🔦 Provides frequently used types for your TypeScript projects. 🦄
+</h4>
+
+<br>
 <br>
 
-## 📃 Table of contents
+## 📃 Table of Contents
 
-- [Usage](#-usage)
+- [Features](#-features)
 - [API](#-api)
   - [KeysOf\<Type>](#keysoftype)
   - [TypeOfValues\<Type>](#typeofvaluestype)
@@ -55,25 +34,55 @@
   - [HasOverlap\<FirstType, SecondType>](#hasoverlapfirsttype-secondtype)
   - [Extend\<Type, Changes>](#extendtype-changes)
   - [MethodName\<Type, Method>](#methodnametype-method)
-- [Examples](#-examples)
+- [Usage](#-usage)
+- [API](#-api)
+- [Examples](#️-examples)
 - [Changelog](#-changelog)
+- [Support](#-support)
 - [License](#-license)
 - [Related](#-related)
 - [Author](#-author)
 
----
+<br>
+<br>
+
+## 🤖 Features
+
+- 🗝 Get all keys of a type with `KeysOf`
+- 📦 Extract all value types from top-level properties via `TypeOfValues`
+- 🔍 Identify only method keys using `MethodsOf`
+- 🧾 Identify only property keys using `PropertiesOf`
+- 🌿 Make every property (nested too) optional with `DeepPartial`
+- ⏳ Accept sync or async values using `Promisable`
+- 🎯 Find keys whose values match a specific type via `EnumKeys`
+- 🛠 Define generic function signatures with `Func` or `Callback`
+- ✂ Remove leading/trailing whitespace in string types with `TrimLeft`, `TrimRight`, `Trim`
+- ❓ Detect generic types using `IsGeneric`
+- 📜 Get a method’s exact signature with `MethodSignature`
+- 📝 Override existing keys with new types via `Override`
+- 🚫 Prevent extending with overlapping keys using `Extend`
+- 🔑 Validate a method exists and return its name with `MethodName`
 
 <br>
 <br>
 
 ## 🕵🏼 Usage
 
-Install it by executing:
+Install it by executing any of the following, depending on your preferred package manager:
 
-```shell
-npm i -D "@igor.dvlpr/common-types"
+```bash
+pnpm add @igorskyflyer/common-types
 ```
 
+```bash
+yarn add @igorskyflyer/common-types
+```
+
+```bash
+npm i @igorskyflyer/common-types
+```
+
+<br>
 <br>
 
 ## 🤹🏼 API
@@ -484,7 +493,7 @@ type NumberToFixedMethod = MethodName<Number, 'toFixed'> // toFixed
 
 `utils.ts`
 ```ts
-import type { Callback } from '@igor.dvlpr/common-types'
+import type { Callback } from '@igorskyflyer/common-types'
 
 function process(
   items: number[],
@@ -513,53 +522,73 @@ console.log(result)
 
 ```
 
----
+<br>
+<br>
 
 ## 📝 Changelog
 
-📑 Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-common-types/blob/main/CHANGELOG.md).
+📑 The changelog is available here, [CHANGELOG.md](https://github.com/igorskyflyer/npm-common-types/blob/main/CHANGELOG.md).
 
----
+<br>
+<br>
 
 ## 🪪 License
 
 Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-common-types/blob/main/LICENSE).
 
----
+<br>
+<br>
+
+## 💖 Support
+
+<div align="center">
+  I work hard for every project, including this one and your support means a lot to me!
+  <br>
+  Consider buying me a coffee. ☕
+  <br>
+  <br>
+  <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="180" height="46"></a>
+  <br>
+  <br>
+  <em>Thank you for supporting my efforts!</em> 🙏😊
+</div>
+
+<br>
+<br>
 
 ## 🧬 Related
 
-[@igor.dvlpr/windev](https://www.npmjs.com/package/@igor.dvlpr/windev)
+[@igorskyflyer/windev](https://www.npmjs.com/package/@igorskyflyer/windev)
 
 > _🍃 Provides ways of checking whether a path is a legacy Windows device. 💾_
 
 <br>
 
-[@igor.dvlpr/magic-queryselector](https://www.npmjs.com/package/@igor.dvlpr/magic-queryselector)
+[@igorskyflyer/magic-queryselector](https://www.npmjs.com/package/@igorskyflyer/magic-queryselector)
 
 > _🪄 A TypeScript-types patch for querySelector/querySelectorAll, make them return types you expect them to! 🔮_
 
 <br>
 
-[@igor.dvlpr/jmap](https://www.npmjs.com/package/@igor.dvlpr/jmap)
+[@igorskyflyer/jmap](https://www.npmjs.com/package/@igorskyflyer/jmap)
 
 > _🕶️ Reads a JSON file into a Map. 🌻_
 
 <br>
 
-[@igor.dvlpr/node-clone-js](https://www.npmjs.com/package/@igor.dvlpr/node-clone-js)
+[@igorskyflyer/clone](https://www.npmjs.com/package/@igorskyflyer/clone)
 
 > _🧬 A lightweight JavaScript utility allowing deep copy-by-value of nested objects, arrays and arrays of objects. 🪁_
 
 <br>
 
-[@igor.dvlpr/extendable-string](https://www.npmjs.com/package/@igor.dvlpr/extendable-string)
+[@igorskyflyer/extendable-string](https://www.npmjs.com/package/@igorskyflyer/extendable-string)
 
 > _🦀 ExtendableString allows you to create strings on steroids that have custom transformations applied to them, unlike common, plain strings.. 🪀_
 
----
-
+<br>
+<br>
 <br>
 
-### 👨🏻‍💻 Author
+## 👨🏻‍💻 Author
 Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
